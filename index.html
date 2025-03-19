@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Website Feedback Popup Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Trigger Button -->
+<button onclick="showFeedbackForm()" style="position: fixed; bottom: 30px; right: 30px; background: #007bff; color: #fff; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; z-index: 1000;">Feedback</button>
+
+<!-- Popup Form -->
+<div class="feedback-popup" id="feedbackPopup">
+  <button class="close-btn" onclick="closeFeedbackForm()">X</button>
+  <h3>We value your feedback!</h3>
+  <input type="text" id="userName" placeholder="Your Name">
+  <input type="email" id="userEmail" placeholder="Your Email">
+  <textarea id="userMessage" placeholder="We’d love to hear your thoughts!"></textarea>
+  <button onclick="sendFeedback()">Submit Feedback</button>
+  <div class="success-message" id="successMessage">Thank you for your feedback! 💌</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
+</body>
+</html>
